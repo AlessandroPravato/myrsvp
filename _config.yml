@@ -15,10 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: MyRsvp
 email: askme@myrsvp.my
-description: >- # this means to ignore newlines until "baseurl:"
-  Do you need a complete guest management solution for your social events?
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://alessandropravato.github.io/myrsvp" # the base hostname & protocol for your site, e.g. http://example.com
+description: Do you need a complete guest management solution for your social events?
+baseurl: "/myrsvp" # the subpath of your site, e.g. /blog
+url: "https://alessandropravato.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 defaults:
