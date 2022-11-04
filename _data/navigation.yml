@@ -1,10 +1,10 @@
 - name: Home
   link: /
 - name: Features
-  link: /features.html
+  link: /features
 - name: Terms of service
-  link: /terms_of_service.html
+  link: /terms_of_service
 - name: Pricing
-  link: /pricing.html
+  link: /pricing
 - name: Contact us
-  link: /contacts.html
+  link: /contacts
