@@ -1,0 +1,60 @@
+//  BUTTONS
+.btn {
+  padding: $spacer-s $spacer-m;
+  margin: $spacer-xxs;
+  border-radius: $spacer-xl;
+  outline:none;
+  border: 0px;
+  background-color: transparent;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  color: $default_text_color;
+  box-shadow: none;
+
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: transparent;
+    border:0;
+    outline: none;
+    transform: translate(-1px,-1px);
+  }
+
+  &:disabled, &.disabled {
+    opacity: $button-disabled-opacity;
+  }
+
+  p {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    margin-left: $spacer-xs;
+  }
+
+  i, p {
+    pointer-events: none;
+  }
+
+  // &:not(:has(i:only-child)) {
+  //   padding: $spacer-s $spacer-m;
+  // }
+}
+
+.btn-primary {
+  background-color: map-deep-get($custom_colors, 'accent_1', '300');
+  color: white;
+
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: map-deep-get($custom_colors, 'accent_1', '400');
+    color: $default_text_color;
+  }
+}
+
+.btn-secondary {
+  background-color: white;
+  color: map-deep-get($custom_colors, 'accent_1', '300');
+  
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: white;
+    color: $link_hover_color;
+  }
+}

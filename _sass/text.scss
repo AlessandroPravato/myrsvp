@@ -1,0 +1,65 @@
+// ==========
+// TEXT
+// ==========
+
+a {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: map-deep-get($custom_colors, 'accent_1', '300');
+  
+  &:hover {
+    text-decoration: none;
+    color: $link_hover_color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+
+p, .paragraph {
+  font-size: $font-size-base;
+  font-weight:300;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+
+small {
+  font-size: 1rem;
+}
+
+b, strong, .bold {
+  font-weight: $font-weight-bold;
+}
+
+
+ul, ol {
+  li {
+    font-size: $font-size-base;
+    margin:0px;
+    padding:0px;
+    text-decoration: none;
+  }
+}
+
+mark {
+  width: fit-content;
+  padding: $spacer-xxs $spacer-s;
+  border-radius: $spacer-xs;
+  font-weight: $font-weight-bold;
+  background-color: map-deep-get($custom_colors, 'accent_1', "400");
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-size: 1.8rem;
+}

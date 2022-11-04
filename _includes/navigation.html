@@ -1,0 +1,10 @@
+<nav>
+  <img class="img--24" src="assets/img/logo_colored.png">
+  <span class="d-flex gap-2">
+    {% for item in site.data.navigation %}
+    <a href="{{ item.link }}" class="nav-item {% if page.url == item.link %}nav-item--active{% endif %}">
+      {{ item.name }}
+    </a>
+    {% endfor %}
+  </span>
+</nav>

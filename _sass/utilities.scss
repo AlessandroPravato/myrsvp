@@ -1,0 +1,14 @@
+//  SIZE
+.min-w-0 {
+  min-width: min-content;
+}
+
+//  BACKGROUND COLORS:
+.no_background {
+  background-color: transparent;
+  background-image: none;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}

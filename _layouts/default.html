@@ -1,3 +1,5 @@
+---
+--- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,10 +11,10 @@
     <meta name="generator" content="Jekyll v3.8.5" />
     <meta property="og:title" content="Myrsvp.my" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description" content="A complete RSVP and event management app for weddings, parties, baby showers, company dinners, and all social events" />
-    <meta property="og:description" content="A complete RSVP and event management app for weddings, parties, baby showers, company dinners, and all social events" />
-    <link rel="canonical" href="http://localhost:4000" />
-    <meta property="og:url" content="http://localhost:4000" />
+    <meta name="description" content="{{site.description}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <link rel="canonical" href="{{site.url}}" />
+    <meta property="og:url" content="{{site.url}}" />
     <meta property="og:site_name" content="Myrsvp.my" />
     <script type="application/ld+json"></script>    
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -34,54 +36,9 @@
   </head>
 
   <body>
-    <nav>
-  <img class="img--24" src="assets/img/logo_colored.png">
-  <span class="d-flex gap-2">
-    
-    <a href="/" class="nav-item ">
-      Home
-    </a>
-    
-    <a href="/features.html" class="nav-item ">
-      Features
-    </a>
-    
-    <a href="/terms_of_service.html" class="nav-item ">
-      Terms of service
-    </a>
-    
-    <a href="/pricing.html" class="nav-item ">
-      Pricing
-    </a>
-    
-    <a href="/contacts.html" class="nav-item ">
-      Contact us
-    </a>
-    
-  </span>
-</nav>
+    {% include navigation.html %}
     <main>
-      <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-
+      {{ content }}
     </main>
     <script src="assets/js/index.js" type="module"></script>
   </body>
