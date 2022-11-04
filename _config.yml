@@ -16,8 +16,8 @@
 title: MyRsvp
 email: askme@myrsvp.my
 description: A complete RSVP and event management app for weddings, parties, baby showers, company dinners, and all social events
-baseurl: "/myrsvp" # the subpath of your site, e.g. /blog
-url: "https://alessandropravato.github.io/mtrsvp" # the base hostname & protocol for your site, e.g. http://example.com
+base_url: "/myrsvp" # the subpath of your site, e.g. /blog
+url: "https://alessandropravato.github.io/myrsvp" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 defaults:
