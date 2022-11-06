@@ -1,0 +1,96 @@
+.card {
+  flex: 1 1 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: $spacer-m;
+  border: none;
+  gap: 0;
+  text-align: left;
+  background-color: $front_element_bg_color;
+
+  @media (min-width: 768px) {
+    flex: 1 1 48%;
+  }
+
+  @media (min-width: 1024px) {
+    flex: 1 1 30%;
+  }
+
+  @media (min-width: 1400px) {
+    flex: 1 1 24%;
+  }
+
+  .card-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $spacer-m $spacer-l;
+    background-color: transparent;
+    border-bottom: 1px dashed $hr_color;
+    border-radius: $spacer-m $spacer-m 0 0;
+    overflow: hidden;
+
+    @media (min-width: 568px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .card-header__title {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: $spacer-xs;
+      word-break: break-word;
+
+      @media (min-width: 568px) {
+        align-items: flex-start;
+      }
+    }
+
+    .card-header__actions {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    [class*="corner"] {
+      position: absolute;
+      top: 0;
+      width: 120px;
+      height: 60px;
+      background-color: map-deep-get($custom_colors, "blue", "300");
+      color: white;
+
+      &[class*="--left"] {
+        left: 0;
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        p {
+          font-weight: $font-weight-bold;
+          transform: rotate(-27deg) translateY(5px);
+        }
+      }
+
+      &[class*="--right"] {
+        right: 0;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+        p {
+          font-weight: $font-weight-bold;
+          transform: rotate(27deg) translate(40%, 5px);
+        }
+      }
+    }
+  }
+
+  .card-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $spacer-m $spacer-l;
+  }
+}

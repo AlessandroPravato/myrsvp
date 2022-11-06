@@ -75,8 +75,9 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+	gap: $spacer-m;
   padding: $spacer-s $spacer-m;
-  background-color: white;
+  background-color: $front_element_bg_color;
   box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.08);
   
   @media (min-width: 568px) {
@@ -88,7 +89,7 @@ nav {
   }
 
 	.nav-item {
-		padding: $spacer-m;
+		padding: $spacer-s;
 		color: map-deep-get($custom_colors, "grays", "500");
 		&:hover {
 			color: map-deep-get($custom_colors, "accent_2", "300");
@@ -103,21 +104,40 @@ nav {
 // OTHER CONTAINERS
 // ==========
 
-.main-content {
+.two-col-layout {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	display: grid;
+	grid-template-areas:
+		"main-content side-menu";
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 100%;
+	gap: $spacer-s;
+}
+
+.main-content {
+	grid-area: main-content;
+	position: relative;
+	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	
-	img {
-		max-height: 400px;
-		max-width: 100%;
-		@media (min-width: 768px) {
-			max-height: 500px;
-		}
-	}
+	overflow: auto;
+	padding: $spacer-l;
+	background-color: $front_element_bg_color;
+}
+
+.side-menu {
+	grid-area: side-menu;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	padding: $spacer-l;
+	background-color: $front_element_bg_color;
 }
 
 .page-section {
@@ -144,6 +164,14 @@ nav {
   @media (min-width: 1400px) {
 		padding:$spacer-m calc(12rem + 5vw);
   }
+
+	img {
+		max-height: 400px;
+		max-width: 100%;
+		@media (min-width: 768px) {
+			max-height: 500px;
+		}
+	}
 }
 
 .page-section__title {
@@ -157,7 +185,7 @@ nav {
 	text-align: center;
 	gap: $spacer-m;
 	padding: $spacer-l $spacer-m;
-	background-color: white;
+	background-color: $front_element_bg_color;
 }
 
 .hero-section {
@@ -170,7 +198,7 @@ nav {
 	justify-content: flex-end;
 	align-items: center;
 	text-align: center;
-	padding-bottom: 6rem;
+	padding-bottom: 10vh;
 	
 	@media (min-width: 768px) {
 		height: 100%;
@@ -225,7 +253,7 @@ nav {
 }
 
 .section--feature {
-	background-color: white;
+	background-color: $front_element_bg_color;
 	p {
 		font-size: $spacer-m;
 	}
@@ -300,5 +328,5 @@ hr {
   border-radius: 0;
   opacity: 1;
   background: none;
-  border-top: 1px dashed map-deep-get($custom_colors, 'grays', '700');
+  border-top: 1px dashed $hr_color;
 }

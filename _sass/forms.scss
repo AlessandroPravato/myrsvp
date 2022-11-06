@@ -1,0 +1,67 @@
+//  FORMS AND INPUTS
+
+form {
+  width: 100%;
+}
+
+.form-control {
+	border-radius: $spacer-s;
+	font-size: $font-size-base;
+  min-height: $spacer-xxl;
+  padding: $spacer-s;
+  transition: box-shadow 0.4s ease-in-out;
+  background-color: $input_bg_color;
+  color: $input_color;
+  border-color: $input_border_color;
+
+  &:hover {
+    border-color: $input_highlighted_color;
+  }
+
+  &:target, &:focus {
+    border: 2px solid $input_highlighted_color;
+    box-shadow: none;
+  }
+}
+
+.input-group-text {
+  border-radius: 0;
+  height: 100%;
+  border-color: map-deep-get($custom_colors, 'grays', '700');
+}
+
+input:required, textarea:required, select:required {
+  border-left: 4px solid map-deep-get($custom_colors, 'accent_2', '300')
+}
+
+input:invalid, textarea:invalid, select:invalid {
+	border-left: 4px solid map-deep-get($custom_colors, 'red', '300');
+  color: map-deep-get($custom_colors, 'red', '400')
+}
+
+input[type=date] {
+	cursor: pointer;
+}
+
+::placeholder {
+  opacity: 0.4;
+  color: $input_color;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: $input_disabled_bg_color;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+textarea{
+  white-space: pre-wrap;
+}
+
+optgroup {
+	font-weight: $font-weight-bold;
+	option {
+		font-weight: 300;
+		margin:0;
+	}
+}

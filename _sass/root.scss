@@ -94,14 +94,6 @@ $custom_colors: (
   )
 );
 
-$primary:                  map-deep-get($custom_colors, 'accent_1', '300') !default;
-$secondary:                map-deep-get($custom_colors, 'accent_2', '300') !default;
-$success:									 map-deep-get($custom_colors, 'green', '300') !default;
-$danger:                   map-deep-get($custom_colors, 'red', '300') !default;
-$default_text_color:       map-deep-get($custom_colors, 'grays', '200');
-$link_hover_color:         map-deep-get($custom_colors, 'accent_1', '400');
-$page_bg_color:            map-deep-get($custom_colors, 'grays', '1000');
-
 @each $color, $shades in $custom_colors {
   @each $shade, $value in $shades {
     .clr-#{$color}-#{$shade} {
@@ -117,6 +109,25 @@ $page_bg_color:            map-deep-get($custom_colors, 'grays', '1000');
     } 
   }
 }
+
+// ------------ 
+$primary:                  map-deep-get($custom_colors, 'accent_1', '300') !default;
+$secondary:                map-deep-get($custom_colors, 'accent_2', '300') !default;
+$success:									 map-deep-get($custom_colors, 'green', '300') !default;
+$danger:                   map-deep-get($custom_colors, 'red', '300') !default;
+
+$default_text_color:       map-deep-get($custom_colors, 'grays', '200');
+$link_hover_color:         map-deep-get($custom_colors, 'accent_1', '400');
+
+$page_bg_color:            map-deep-get($custom_colors, 'grays', '1000');
+$front_element_bg_color:   white;
+$hr_color:                 map-deep-get($custom_colors, 'grays', '700');
+
+$input_bg_color:           white;
+$input_border_color:       map-deep-get($custom_colors, 'grays', '700');
+$input_highlighted_color:  map-deep-get($custom_colors, 'accent_2', '400');
+$input_color:              map-deep-get($custom_colors, 'grays', '400');
+$input_disabled_bg_color:  map-deep-get($custom_colors, 'grays', '500');
 
 // ------------ 
 // --- Fonts

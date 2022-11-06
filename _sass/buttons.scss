@@ -1,5 +1,7 @@
 //  BUTTONS
 .btn {
+  position: relative;
+  width: max-content;
   padding: $spacer-s $spacer-m;
   margin: $spacer-xxs;
   border-radius: $spacer-xl;
