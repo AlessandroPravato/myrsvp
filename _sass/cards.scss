@@ -42,11 +42,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       gap: $spacer-xs;
       word-break: break-word;
 
       @media (min-width: 568px) {
         align-items: flex-start;
+        text-align: left;
       }
     }
 
@@ -70,8 +72,9 @@
         left: 0;
         clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
         p {
+          font-size: 1.2rem;
           font-weight: $font-weight-bold;
-          transform: rotate(-27deg) translateY(5px);
+          transform: rotate(-27deg) translateY(8px);
         }
       }
 
@@ -79,8 +82,9 @@
         right: 0;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
         p {
+          font-size: 1.2rem;
           font-weight: $font-weight-bold;
-          transform: rotate(27deg) translate(40%, 5px);
+          transform: rotate(27deg) translate(36%, 8px);
         }
       }
     }
