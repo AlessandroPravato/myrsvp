@@ -43,20 +43,36 @@
 
 .btn-primary {
   background-color: map-deep-get($custom_colors, 'accent_1', '300');
+  border: 1px solid map-deep-get($custom_colors, "accent_1", "300");
   color: white;
 
   &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
     background-color: map-deep-get($custom_colors, 'accent_1', '400');
-    color: $default_text_color;
+    border: 1px solid map-deep-get($custom_colors, "accent_1", "300");
+    color: 1px solid map-deep-get($custom_colors, "accent_1", "300");;
   }
 }
 
 .btn-secondary {
   background-color: white;
-  color: map-deep-get($custom_colors, 'accent_1', '300');
+  border: 1px solid map-deep-get($custom_colors, "grays", "500");
+  color: $default_text_color;
   
   &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
-    background-color: white;
-    color: $link_hover_color;
+    background-color: map-deep-get($custom_colors, "accent_2", "400");
+    border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+    color: $default_text_color;
+  }
+}
+
+.btn-accept {
+  background-color: map-deep-get($custom_colors, "accent_2", "300");
+  border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+  color: white;
+  
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: map-deep-get($custom_colors, "accent_2", "400");
+    border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+    color: map-deep-get($custom_colors, "accent_2", "300");
   }
 }

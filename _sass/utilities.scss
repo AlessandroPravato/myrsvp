@@ -1,6 +1,9 @@
 //  SIZE
 .min-w-0 {
-  min-width: min-content;
+  min-width: fit-content;
+}
+.min-h-0 {
+  min-height: fit-content;
 }
 
 //  BACKGROUND COLORS:
@@ -11,4 +14,8 @@
 
 .reversed {
   flex-direction: row-reverse;
+}
+
+.no-bold {
+  font-weight: $font-weight-standard;
 }

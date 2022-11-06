@@ -110,10 +110,20 @@ nav {
 	height: 100%;
 	display: grid;
 	grid-template-areas:
-		"main-content side-menu";
-	grid-template-columns: 3fr 1fr;
-	grid-template-rows: 100%;
+		"main-content"
+		"side-menu";
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
 	gap: $spacer-s;
+	overflow: auto;
+
+	@media (min-width: 768px) {
+    grid-template-areas:
+		"main-content side-menu";
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: 100%;
+		overflow: hidden;
+  }
 }
 
 .main-content {
@@ -123,9 +133,12 @@ nav {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: auto;
 	padding: $spacer-l;
 	background-color: $front_element_bg_color;
+	
+	@media (min-width: 768px) {
+		overflow: auto;
+	}
 }
 
 .side-menu {
@@ -135,9 +148,12 @@ nav {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: auto;
 	padding: $spacer-l;
 	background-color: $front_element_bg_color;
+
+	@media (min-width: 768px) {
+		overflow: auto;
+	}
 }
 
 .page-section {
@@ -164,14 +180,6 @@ nav {
   @media (min-width: 1400px) {
 		padding:$spacer-m calc(12rem + 5vw);
   }
-
-	img {
-		max-height: 400px;
-		max-width: 100%;
-		@media (min-width: 768px) {
-			max-height: 500px;
-		}
-	}
 }
 
 .page-section__title {
@@ -259,6 +267,37 @@ nav {
 	}
 }
 
+.invitation-preview-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow: auto;
+	padding: 0;
+	gap: $spacer-m;
+
+	@media (min-width: 568px) {
+		gap: 0;
+	}
+	@media (min-width: 768px) {
+    padding:$spacer-m $spacer-xl;
+  }
+
+  @media (min-width: 1024px) {
+    padding:$spacer-m 6rem;
+  }
+
+  @media (min-width: 1400px) {
+		padding:$spacer-m calc(12rem + 5vw);
+  }
+
+	.card {
+		flex: none;
+	}
+}
+// ==========
+// SWIPER
+// ==========
+
 .swiper-container {
 	width: 100%;
 	padding: $spacer-l 0;
@@ -272,6 +311,14 @@ nav {
 	
 	@media (min-width: 768px) {
 		flex-direction: row;
+	}
+
+	img {
+		max-height: 400px;
+		max-width: 100%;
+		@media (min-width: 768px) {
+			max-height: 500px;
+		}
 	}
 }
 
