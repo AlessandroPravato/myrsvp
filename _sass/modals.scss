@@ -1,0 +1,39 @@
+// Default modal
+.modal {
+	.modal-dialog {
+		.modal-content {
+			border-radius: $spacer-m;
+			border: none;
+      background-color: $front_element_bg_color;
+
+			.modal-header {    
+				align-items: center;
+				padding: $spacer-xl;
+				border: none;
+        border-radius: $spacer-m $spacer-m 0 0;
+        background-color: $modal_header_bg_color;
+			}
+
+			.modal-body {   
+				display: flex; 
+				flex-flow: column;
+				padding: $spacer-xl;
+        gap: $spacer-s;
+
+        hr {
+          margin: $spacer-s 0;
+        }
+			}
+
+			.modal-actions {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				padding: 0 $spacer-xl $spacer-xl;
+        gap: $spacer-s;
+			}
+		}
+	}
+}

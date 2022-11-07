@@ -1,0 +1,96 @@
+<article class="modal fade" id="modal_agree" tabindex="-1" role="dialog" aria-labelledby="modal_agree" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <header class="modal-header">
+        <div class="modal-title">
+          <h3>Great!</h3>
+          <p>Let us know your preferences</p>
+        </div>
+        {% include buttons/modal_dismiss_button.html %}
+      </header>
+      
+      <section class="modal-body">
+        
+        <span class="d-flex align-items-center justify-content-between">
+          <label>Total number of pax:</label>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">1</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+        <hr>
+
+        <span class="d-flex align-items-center justify-content-between">
+          <span class="d-flex align-items-center gap-3">
+            <img src="assets/img/app-preview/baby_chair.png" alt="baby_chair" class="img--24">
+            <label>Baby chair</label>
+          </span>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">0</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+
+        <span class="d-flex align-items-center justify-content-between">
+          <span class="d-flex align-items-center gap-3">
+            <img src="assets/img/app-preview/halal_menu.png" alt="baby_chair" class="img--24">
+            <label>Halal menu</label>
+          </span>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">0</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+
+        <span class="d-flex align-items-center justify-content-between">
+          <span class="d-flex align-items-center gap-3">
+            <img src="assets/img/app-preview/vegetarian_menu.png" alt="baby_chair" class="img--24">
+            <label>Vegetarian menu</label>
+          </span>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">0</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+
+        <span class="d-flex align-items-center justify-content-between">
+          <span class="d-flex align-items-center gap-3">
+            <img src="assets/img/app-preview/gluten_free_menu.png" alt="baby_chair" class="img--24">
+            <label>Gluten-free menu</label>
+          </span>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">0</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+
+        <span class="d-flex align-items-center justify-content-between">
+          <span class="d-flex align-items-center gap-3">
+            <img src="assets/img/app-preview/accessibility.png" alt="baby_chair" class="img--24">
+            <label>Accessibility</label>
+          </span>
+          <span class="d-flex align-items-center gap-3" data-controller="counter">
+            {% include buttons/counter_minus_button.html %}
+            <p class="bold" data-counter-target="display">0</p>
+            {% include buttons/counter_plus_button.html %}
+          </span>
+        </span>
+        <hr>
+
+        <label>Any special request?</label>
+        <textarea rows="3" placeholder="Type here" class="form-control"></textarea>
+      </section>
+
+      <section class="modal-actions">
+        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="modal_confirmation">Send RSVP</button>
+      </section>
+
+    </div>
+  </div>
+</article>

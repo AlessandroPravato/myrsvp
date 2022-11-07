@@ -49,11 +49,23 @@
   &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
     background-color: map-deep-get($custom_colors, 'accent_1', '400');
     border: 1px solid map-deep-get($custom_colors, "accent_1", "300");
-    color: 1px solid map-deep-get($custom_colors, "accent_1", "300");;
+    color: 1px solid map-deep-get($custom_colors, "accent_1", "300");
   }
 }
 
 .btn-secondary {
+  background-color: map-deep-get($custom_colors, 'accent_2', '300');
+  border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+  color: white;
+
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: map-deep-get($custom_colors, 'accent_2', '400');
+    border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+    color: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+  }
+}
+
+.btn-tertiary {
   background-color: white;
   border: 1px solid map-deep-get($custom_colors, "grays", "500");
   color: $default_text_color;
@@ -65,14 +77,37 @@
   }
 }
 
-.btn-accept {
-  background-color: map-deep-get($custom_colors, "accent_2", "300");
-  border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
+.btn-green {
+  background-color: map-deep-get($custom_colors, "green", "300");
+  border: 1px solid map-deep-get($custom_colors, "green", "300");
   color: white;
   
   &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
-    background-color: map-deep-get($custom_colors, "accent_2", "400");
-    border: 1px solid map-deep-get($custom_colors, "accent_2", "300");
-    color: map-deep-get($custom_colors, "accent_2", "300");
+    background-color: map-deep-get($custom_colors, "green", "400");
+    border: 1px solid map-deep-get($custom_colors, "green", "300");
+    color: map-deep-get($custom_colors, "green", "300");
+  }
+}
+
+.btn-red {
+  background-color: map-deep-get($custom_colors, "red", "300");
+  border: 1px solid map-deep-get($custom_colors, "red", "300");
+  color: white;
+  
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus {
+    background-color: map-deep-get($custom_colors, "red", "400");
+    border: 1px solid map-deep-get($custom_colors, "red", "300");
+    color: map-deep-get($custom_colors, "red", "300");
+  }
+}
+
+[class*="btn-icon"] {
+  padding: 0;
+
+  &[class$="--green"] {
+    color: map-deep-get($custom_colors, "green", "300");
+  }
+  &[class$="--red"] {
+    color: map-deep-get($custom_colors, "red", "300");
   }
 }

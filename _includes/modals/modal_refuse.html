@@ -1,0 +1,23 @@
+<article class="modal fade" id="modal_refuse" tabindex="-1" role="dialog" aria-labelledby="modal_refuse" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <header class="modal-header bg-accent_1-400">
+        <div class="modal-title">
+          <h3>Oh no!</h3>
+          <p>Do you want to leave a message anyway?</p>
+        </div>
+        {% include buttons/modal_dismiss_button.html %}
+      </header>
+
+      <section class="modal-body">
+        <textarea rows="6" placeholder="Type here" class="form-control"></textarea>
+      </section>
+
+      <section class="modal-actions">
+        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="modal_confirmation">Send RSVP</button>
+      </section>
+
+    </div>
+  </div>
+</article>

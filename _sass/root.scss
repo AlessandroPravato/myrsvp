@@ -123,12 +123,13 @@ $page_bg_color:            map-deep-get($custom_colors, 'grays', '1000');
 $front_element_bg_color:   white;
 $hr_color:                 map-deep-get($custom_colors, 'grays', '700');
 
+$modal_header_bg_color:    map-deep-get($custom_colors, 'accent_2', '400');
+
 $input_bg_color:           white;
 $input_border_color:       map-deep-get($custom_colors, 'grays', '700');
 $input_highlighted_color:  map-deep-get($custom_colors, 'accent_2', '400');
 $input_color:              map-deep-get($custom_colors, 'grays', '400');
 $input_disabled_bg_color:  map-deep-get($custom_colors, 'grays', '500');
-
 // ------------ 
 // --- Fonts
 

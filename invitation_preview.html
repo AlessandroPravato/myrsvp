@@ -2,8 +2,8 @@
 layout: app_preview
 ---
 
-<nav>
-  <img class="img--24" src="assets/img/logo_colored.png">
+<nav class="justify-content-center">
+  <img class="img--36" src="assets/img/logo_colored.png">
 </nav>
   
 <main class="invitation-preview-page">
@@ -17,8 +17,8 @@ layout: app_preview
         <h1><i class="no-bold">Dear</i> Ms Kimberly Siah</h1>
         <p>Please RSVP before 1 May 2019</p>
         <span class="d-flex gap-2 py-3">
-          <button class="btn btn-accept" data-bs-toggle="modal" data-bs-target="#modal_agree">I'll come</button>
-          <button class="btn btn-secondary" data-toggle="modal" data-bs-target="#modal_refuse">I can't make it</button>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal_agree">I'll come</button>
+          <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#modal_refuse">I can't make it</button>
         </span>
       </div>
     </article>
@@ -72,130 +72,15 @@ layout: app_preview
 
         <img class="img--48" src="assets/img/logo_colored.png" alt="logo">
         <p>Do you need a complete guest management solution for your social events?</p>
-        <button class="btn btn-secondary">Learn more</button>
+        <a href="{{site.base_url}}/" class="btn btn-secondary">Learn more</a>
       </div>
     </article>
   </div>
 
 </main>
 
-<!-- Modal agree -->
-<div class="modal fade" id="modal_agree" tabindex="-1" role="dialog" aria-labelledby="ModalAgree" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title">
-          <b>Great!</b><br/>
-          Let us know your preferences
-        </div>
-      </div>
-      <div class="modal-body">
-        <div class="preferences-row">
-          <div><b>Total number of pax:</b></div>
-          <div class="preferences-count" data-name="preferences_count_1">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>1</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-        <hr/>
+<!-- Modals agree -->
+{% include modals/modal_agree.html %}
+{% include modals/modal_refuse.html %}
+{% include modals/modal_confirmation.html %}
 
-        <div class="preferences-row with-icon">
-          <img src="assets/img/app-preview/baby_chair.png" alt="baby_chair" class="preferences-icon">
-          <div class="preferences-name">Baby chair</div>
-          <div class="preferences-count" data-name="preferences_count_0">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>0</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-
-        <div class="preferences-row with-icon">
-          <img src="assets/img/app-preview/halal_menu.png" alt="baby_chair" class="preferences-icon">
-          <div class="preferences-name">Halal menu</div>
-          <div class="preferences-count" data-name="preferences_count_0">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>0</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-
-        <div class="preferences-row with-icon">
-          <img src="assets/img/app-preview/vegetarian_menu.png" alt="baby_chair" class="preferences-icon">
-          <div class="preferences-name">Vegetarian menu</div>
-          <div class="preferences-count" data-name="preferences_count_0">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>0</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-
-        <div class="preferences-row with-icon">
-          <img src="assets/img/app-preview/gluten_free_menu.png" alt="baby_chair" class="preferences-icon">
-          <div class="preferences-name">Gluten-free menu</div>
-          <div class="preferences-count" data-name="preferences_count_0">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>0</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-
-        <div class="preferences-row with-icon">
-          <img src="assets/img/app-preview/accessibility.png" alt="baby_chair" class="preferences-icon">
-          <div class="preferences-name">Accessibility</div>
-          <div class="preferences-count" data-name="preferences_count_0">
-            <img src="assets/img/app-preview/minus.svg" alt="minus" class="mr-2 minus-btn">
-            <div>0</div>
-            <img src="assets/img/app-preview/plus.svg" alt="plus" class="ml-2 plus-btn">
-          </div>
-        </div>
-        <hr/>
-
-        <div class="my-4">
-          <b>Any special request?</b><br/>
-        </div>
-        <textarea rows="3" placeholder="Type here" class="form-control"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-green" id="agree_submit">Send RSVP</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal_confirm" tabindex="-1" role="dialog" aria-labelledby="ModalConfirm" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-center" role="document">
-    <div class="modal-content">
-      <div class='agree-modal'>
-        <div class='agree-text'>Thank you for your RSVP<br/>
-          <img src='assets/img/app-preview/confirm.png'/>
-        </div>
-        <div class='agree-img'>
-          <img src='assets/img/app-preview/agree.png'/>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal refuse -->
-<div class="modal fade" id="modal_refuse" tabindex="-1" role="dialog" aria-labelledby="ModalRefuse" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-red">
-        <div class="modal-title">
-          <b>Oh no!</b><br/>
-          Do you want to leave a message anyway?
-        </div>
-      </div>
-      <div class="modal-body">
-        <textarea rows="6" placeholder="Type here" class="form-control"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-red" id="refuse_submit">Send RSVP</button>
-      </div>
-    </div>
-  </div>
-</div>
