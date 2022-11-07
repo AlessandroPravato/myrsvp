@@ -18,7 +18,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    ethon (0.15.0)
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
@@ -262,7 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-feed
+  jekyll-seo-tag
   minima
   tzinfo-data
   wdm (~> 0.1.0)
