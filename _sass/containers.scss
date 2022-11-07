@@ -162,7 +162,7 @@ nav {
 	position:relative;
 	width: 100%;
 	height: fit-content;
-	min-height: calc(100% + 6rem);
+	min-height: calc(100% - 6rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
